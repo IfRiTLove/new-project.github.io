@@ -1,0 +1,42 @@
+header {
+  border-bottom: solid 1px rgba(28, 28, 33, 1);
+
+  .container {
+    @include flex(row, nowrap, space-between, center, 0px);
+    height: 120px;
+    border-left: solid 1px rgba(28, 28, 33, 1);
+    border-right: solid 1px rgba(28, 28, 33, 1);
+
+    .logo {}
+
+    .nav {
+      margin-top: auto;
+      height: 87px;
+      border-top: solid 1px rgba(28, 28, 33, 1);
+      border-left: solid 1px rgba(28, 28, 33, 1);
+      border-right: solid 1px rgba(28, 28, 33, 1);
+      border-radius: 10px 10px 0 0;
+      display: flex;
+
+      a {
+        padding: 30px 40px;
+
+        &:nth-of-type(2),
+        &:nth-of-type(4) {
+          border-left: solid 1px rgba(28, 28, 33, 1);
+          border-right: solid 1px rgba(28, 28, 33, 1);
+        }
+
+        &:hover,
+        &:active {
+          background-color: rgba(19, 19, 22, 1);
+        }
+      }
+            
+
+    }
+
+    .btn {}
+  }
+
+}

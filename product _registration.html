@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAZURIT</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+  <header></header>
+  <section class="baner">
+    <img src="/assets/images/Product_Registration.png" alt="Product Registration" class="baner__img" style="
+    object-position: center;
+">
+    <div class="baner__text">
+      <h1>Регистрация продукции</h1>
+    </div>
+  </section>
+
+  <section class="info-text">
+    <div class="container">
+      <h6>Регистрация продукции</h6>
+      <p>Компания «ЛазуритСертифик» предоставляет услуги по регистрации продукции, включая получение технического
+        свидетельства и
+        свидетельства о государственной регистрации. Наша команда экспертов поможет вам легко и оперативно пройти весь
+        процесс
+        регистрации, обеспечивая соблюдение всех необходимых норм и требований.
+
+      </p>
+    </div>
+
+  </section>
+  <section class="info-section">
+    <div class="info-content">
+      <div class="wrapper">
+        <h5>Техническое свидетельство документов</h5>
+        <p>В состав прилагаемых к заявке на получение технического свидетельства документов необходимо включить:</p>
+        <ul>
+          <li>описание продукции</li>
+          <li>характеристики, свойства</li>
+          <li>акты испытаний</li>
+          <li>технологические параметры</li>
+          <li>чертежи</li>
+          <li>инструкции по установке или монтажу</li>
+          <li>имеющиеся сертификаты</li>
+          <li>данные, характеризующие безопасность, надежность продукции</li>
+          <li>данные об опыте ее применения</li>
+          <li>другие данные, которые позволят экспертам по сертификации составить необходимую программу работ и методику
+            исследований,
+            оценить их объемы, содержание и затраты.</li>
+        </ul>
+      </div>
+      <div class="wrapper">
+        <h5>Получение</h5>
+
+        <p class="fade-text">
+          Получение технического свидетельства и свидетельства о государственной регистрации является важным этапом для успешного
+          внедрения и продвижения вашей продукции на рынке. Мы гарантируем профессиональное сопровождение, анализ ваших
+          документов, консультации по всем вопросам, связанным с регистрацией.
+          Обратившись в компанию «БизнесСертифик», вы получите надежного партнера, который заботится о вашем бизнесе и поможет вам
+          преуспеть на рынке. Доверьтесь профессионалам, обратитесь к нам и обеспечьте своей продукции успешную регистрацию и
+          высокий уровень доверия потребителей.
+        </p>
+      </div>
+
+      <button class="read-more-btn">
+        Читать полностью
+        <span class="arrow"><img src="/assets/images/arrow.png" alt="arrow"></span>
+      </button>
+    </div>
+    <div class="contact-block">
+      <div class="stats">
+        <!-- Лайк -->
+        <div class="stat like" id="likeStat">
+          <img id="likeIcon" src="/assets/images/like1.png" alt="Like" />
+          <span id="likeCount">24.5k</span>
+        </div>
+
+        <!-- Просмотры -->
+        <div class="stat">
+          <img src="/assets/images/view.png" alt="Views" />
+          <span>50k</span>
+        </div>
+
+        <!-- Репост -->
+        <div class="stat share" id="shareStat">
+          <img id="shareIcon" src="/assets/images/share.png" alt="Share" />
+          <span id="shareText">206</span>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <h3><img src="/assets/images/star1.png" alt="star"> Связаться</h3>
+        <div class="contact-info">
+          <div>
+            <p><strong>Электронная почта</strong></p>
+            <a href="mailto:2324233544">2324233544</a>
+          </div>
+          <div>
+            <p><strong>Номер телефона</strong></p>
+            <a href="tel:+000000000000">+00 0000000000</a>
+          </div>
+        </div>
+
+        <div class="contact-btns">
+          <div class="btns__slider">
+            <a href="" class="slider-btn btn"><img src="/assets/images/facebook.png" alt="facebook"></a>
+            <a href="" class="slider-btn btn"><img src="/assets/images/twitter.png" alt="twitter"></a>
+            <a href="" class="slider-btn btn"><img src="/assets/images/in.png" alt="in"></a>
+          </div>
+
+          <button class="btn" onclick="window.location.href='mailto:damienbraun@gmail.com'"> Давайте начнём</button>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+
+
+
+  <footer></footer>
+
+  <!-- header and footer  -->
+  <script>
+    async function includeHTML(selector, file) {
+      const el = document.querySelector(selector);
+      if (el) {
+        const res = await fetch(file);
+        if (res.ok) {
+          el.innerHTML = await res.text();
+        } else {
+          el.innerHTML = `<p>Не вдалося завантажити ${file}</p>`;
+        }
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      includeHTML("header", "header.html");
+      includeHTML("footer", "footer.html");
+    });
+  </script>
+
+  <!-- Сворачивание текста -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const btn = document.querySelector(".read-more-btn");
+      const content = document.querySelector(".info-content");
+
+      btn.addEventListener("click", () => {
+        content.classList.toggle("expanded");
+      });
+    });
+  </script>
+
+  <!-- Лайк и репост -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // ==== ЛАЙК ====
+      const likeIcon = document.getElementById("likeIcon");
+      const likeCount = document.getElementById("likeCount");
+      const likeStat = document.getElementById("likeStat");
+
+      const baseCount = 24500;
+      const emptyIcon = "/assets/images/like1.png";
+      const filledIcon = "/assets/images/like.png";
+      let liked = localStorage.getItem("liked") === "true";
+
+      const formatK = (num) => (num / 1000).toFixed(1) + "k";
+
+      function updateLikeDisplay() {
+        likeIcon.src = liked ? filledIcon : emptyIcon;
+        likeCount.textContent = formatK(baseCount + (liked ? 1 : 0));
+      }
+
+      updateLikeDisplay();
+
+      likeStat.addEventListener("click", () => {
+        liked = !liked;
+        localStorage.setItem("liked", liked);
+        updateLikeDisplay();
+      });
+
+      // ==== РЕПОСТ ====
+      const shareStat = document.getElementById("shareStat");
+      const shareText = document.getElementById("shareText");
+
+      shareStat.addEventListener("click", async () => {
+        const shareData = {
+          title: document.title,
+          url: window.location.href
+        };
+
+        if (navigator.share) {
+          try {
+            await navigator.share(shareData);
+            shareText.textContent = "Успех";
+          } catch (err) {
+            shareText.textContent = "Отменено";
+          }
+        } else {
+          // Для браузеров, которые не поддерживают Web Share API
+          try {
+            await navigator.clipboard.writeText(window.location.href);
+            shareText.textContent = "Ссылка скопирована!";
+          } catch (e) {
+            shareText.textContent = "Ошибка копирования";
+          }
+        }
+
+        setTimeout(() => {
+          shareText.textContent = "Поделиться";
+        }, 2000);
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>

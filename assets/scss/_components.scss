@@ -1,0 +1,382 @@
+// Стили компонентов интерфейса
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+// Общие стили
+html {
+  box-sizing: border-box;
+  background-color: rgba(7, 7, 8, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+// Кнопки
+.btn {
+  position: relative;
+  height: 60px;
+  max-width: 190px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a1a1a;
+  color: white;
+  border-radius: 10px;
+  z-index: 0;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: inherit;
+    background: linear-gradient(170deg,
+        rgba(47, 47, 55, 1),
+        rgba(74, 74, 80, 0));
+
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    z-index: -1;
+  }
+
+  &:hover {
+    text-decoration: none;
+    background: linear-gradient(170deg,
+        rgba(47, 47, 55, 1),
+        rgba(47, 47, 55, 0));
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn1 {
+  width: 130px;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(74, 44, 237, 1);
+  box-shadow: inset 4px 4px 17.4px rgba(255, 255, 255, 0.28);
+  border-radius: 100px;
+}
+
+// Типографика
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 700;
+  line-height: 1.2;
+  font-family: 'Manrope', serif;
+  color: white;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 58px;
+  font-weight: 600;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+h5 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+h6 {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 100%;
+  color: rgba(98, 100, 108, 1);
+  text-transform: uppercase;
+}
+
+.text7 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 100%;
+  color: rgba(202, 202, 206, 1);
+  text-transform: uppercase;
+}
+
+p {
+  margin-top: 0;
+  font-family: "Manrope", sans-serif;
+
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Manrope', serif;
+
+}
+
+// Миксин для гибкого контейнера
+@mixin flex($direction: row, $wrap: nowrap, $justify: flex-start, $align: stretch, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+.container {
+  max-width: 1670px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+// Cлайдер 
+.slider-wrapper {
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.slider {
+  display: flex;
+
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+  scrollbar-width: none;
+  user-select: none;
+
+
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .slide {
+    flex: 0 0 auto;
+    max-width: 398px;
+    width: 100vw;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    user-select: none;
+    margin-right: 16px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    img {
+      border-radius: 20px;
+      width: 100%;
+      pointer-events: none;
+      user-drag: none;
+      user-select: none;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;
+      pointer-events: none;
+
+    }
+
+    &__text {
+      @include flex(row, nowrap, space-between, normal, 0px);
+      margin-top: 19px;
+
+      p {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 100%;
+        color: white;
+        word-break: break-word;
+      }
+
+      a {
+        @include flex(row, nowrap, normal, center, 10px);
+        padding: 6px 0;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 100%;
+        border-bottom: 1px solid rgba(47, 47, 55, 1);
+        max-width: 150px;
+        width: 100vw;
+
+        img {
+          width: 16.5px;
+          height: 16.5px;
+          border-radius: 0;
+        }
+      }
+    }
+
+  }
+
+  .slide.width {
+    max-width: 700px;
+    width: 100vw;
+  }
+
+  &.grabbing {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+  }
+
+}
+
+.btns__slider {
+  @include flex(row, nowrap, center, center, 16px);
+  max-width: 160px;
+  width: 100vw;
+  height: 82px;
+  border: solid 1px rgba(28, 28, 33, 1);
+  background-color: rgba(7, 7, 8, 1);
+  border-radius: 100px;
+
+
+  .slider-btn {
+    background-color: rgba(28, 28, 33, 1);
+    border-radius: 100px;
+    height: 62px;
+    width: 62px;
+    border: 0;
+
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      padding: 1px;
+      border-radius: inherit;
+      background: linear-gradient(180deg, rgb(47, 47, 55), rgba(74, 74, 80, 0));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      z-index: -1;
+    }
+  }
+}
+
+//Слайдер отзывов 
+.reviews-slide {
+  @include flex(column, nowrap, normal, normal, 30px);
+  background-image: url(/assets/images/Card.png);
+  background-repeat: no-repeat;
+  height: 100vh;
+  max-height: 352px;
+  max-width: 512px !important;
+  padding: 40px;
+
+  .slide-top {
+    @include flex(row, nowrap, space-between, center, 0px);
+
+    .slide__text__top {
+      @include flex(column, nowrap, normal, normal, 0px);
+
+      .name {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 150%;
+        color: white;
+      }
+
+      .city {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 150%;
+        color: rgba(98, 100, 108, 1);
+      }
+    }
+
+    .btns__slider {
+      @include flex(row, nowrap, center, center, 10px);
+      max-width: 184px;
+      height: 68px;
+
+      .slider-btn {
+        @include flex(row, nowrap, center, center, 0px);
+        width: 48px;
+        height: 48px;
+
+        img {
+          width: 20px;
+          border-radius: 0;
+
+        }
+      }
+    }
+  }
+
+  .rating {
+    max-width: 140px;
+    width: 100%;
+  }
+
+  .slide__text {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 150%;
+    color: white;
+    margin-top: 0;
+  }
+}
+
+//Страницы
+.wrapper-track {
+  background-color: rgba(14, 14, 16, 1);
+  overflow: hidden;
+
+  .pages {
+
+    width: 100%;
+    height: 80px;
+    background-color: rgba(14, 14, 16, 1);
+    @include flex(row, nowrap, space-between, center, 50px);
+    justify-content: space-between !important;
+
+    .page {
+      @include flex(row, nowrap, normal, center, 10px);
+
+      span {
+        max-width: 275px;
+        width: 100vw;
+      }
+
+      .reg {
+        max-width: 185px;
+        width: 100vw;
+      }
+    }
+  }
+}
