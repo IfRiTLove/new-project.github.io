@@ -291,7 +291,7 @@ a {
 //Слайдер отзывов 
 .reviews-slide {
   @include flex(column, nowrap, normal, normal, 30px);
-  background-image: url(/assets/images/Card.png);
+  background-image: url(assets/images/Card.png);
   background-repeat: no-repeat;
   height: 100vh;
   max-height: 352px;
