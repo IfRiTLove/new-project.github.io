@@ -11,7 +11,7 @@
 <body>
   <header></header>
   <section class="baner">
-    <img src="/assets/images/Self_regulation.png" alt="Self regulation" class="baner__img" style="
+    <img src="assets/images/Self_regulation.png" alt="Self regulation" class="baner__img" style="
     object-position: center;
 ">
     <div class="baner__text">
@@ -69,32 +69,32 @@
 
       <button class="read-more-btn">
         Читать полностью
-        <span class="arrow"><img src="/assets/images/arrow.png" alt="arrow"></span>
+        <span class="arrow"><img src="assets/images/arrow.png" alt="arrow"></span>
       </button>
     </div>
     <div class="contact-block">
       <div class="stats">
         <!-- Лайк -->
         <div class="stat like" id="likeStat">
-          <img id="likeIcon" src="/assets/images/like1.png" alt="Like" />
+          <img id="likeIcon" src="assets/images/like1.png" alt="Like" />
           <span id="likeCount">24.5k</span>
         </div>
 
         <!-- Просмотры -->
         <div class="stat">
-          <img src="/assets/images/view.png" alt="Views" />
+          <img src="assets/images/view.png" alt="Views" />
           <span>50k</span>
         </div>
 
         <!-- Репост -->
         <div class="stat share" id="shareStat">
-          <img id="shareIcon" src="/assets/images/share.png" alt="Share" />
+          <img id="shareIcon" src="assets/images/share.png" alt="Share" />
           <span id="shareText">206</span>
         </div>
       </div>
 
       <div class="contact-card">
-        <h3><img src="/assets/images/star1.png" alt="star"> Связаться</h3>
+        <h3><img src="assets/images/star1.png" alt="star"> Связаться</h3>
         <div class="contact-info">
           <div>
             <p><strong>Электронная почта</strong></p>
@@ -108,9 +108,9 @@
 
         <div class="contact-btns">
           <div class="btns__slider">
-            <a href="" class="slider-btn btn"><img src="/assets/images/facebook.png" alt="facebook"></a>
-            <a href="" class="slider-btn btn"><img src="/assets/images/twitter.png" alt="twitter"></a>
-            <a href="" class="slider-btn btn"><img src="/assets/images/in.png" alt="in"></a>
+            <a href="" class="slider-btn btn"><img src="assets/images/facebook.png" alt="facebook"></a>
+            <a href="" class="slider-btn btn"><img src="assets/images/twitter.png" alt="twitter"></a>
+            <a href="" class="slider-btn btn"><img src="assets/images/in.png" alt="in"></a>
           </div>
 
           <button class="btn" onclick="window.location.href='mailto:damienbraun@gmail.com'"> Давайте начнём</button>
@@ -170,8 +170,8 @@
       const likeStat = document.getElementById("likeStat");
 
       const baseCount = 24500;
-      const emptyIcon = "/assets/images/like1.png";
-      const filledIcon = "/assets/images/like.png";
+      const emptyIcon = "assets/images/like1.png";
+      const filledIcon = "assets/images/like.png";
       let liked = localStorage.getItem("liked") === "true";
 
       const formatK = (num) => (num / 1000).toFixed(1) + "k";
