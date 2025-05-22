@@ -1,7 +1,7 @@
 .hero {
 
   .container {
-    background-image: url(/assets/images/Abstract_Design.png);
+    background-image: url(assets/images/Abstract_Design.png);
     background-repeat: no-repeat;
     background-position: center;
     max-height: 400px;
@@ -109,7 +109,7 @@
           transform: translateY(-50%);
           width: 40px;
           height: 40px;
-          background: url('/assets/images/star-dark.png') no-repeat center / contain;
+          background: url('assets/images/star-dark.png') no-repeat center / contain;
         }
       }
     }
