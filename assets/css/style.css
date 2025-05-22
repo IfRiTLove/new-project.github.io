@@ -261,7 +261,7 @@ a {
   justify-content: normal;
   align-items: normal;
   gap: 30px;
-  background-image: url(/assets/images/Card.png);
+  background-image: url(assets/images/Card.png);
   background-repeat: no-repeat;
   height: 100vh;
   max-height: 352px;
@@ -399,7 +399,7 @@ header .container .nav a:hover, header .container .nav a:active {
   background-color: rgb(19, 19, 22);
 }
 .hero .container {
-  background-image: url(/assets/images/Abstract_Design.png);
+  background-image: url(assets/images/Abstract_Design.png);
   background-repeat: no-repeat;
   background-position: center;
   max-height: 400px;
@@ -549,7 +549,7 @@ header .container .nav a:hover, header .container .nav a:active {
   transform: translateY(-50%);
   width: 40px;
   height: 40px;
-  background: url("/assets/images/star-dark.png") no-repeat center/contain;
+  background: url("assets/images/star-dark.png") no-repeat center/contain;
 }
 
 .products {
@@ -1497,7 +1497,7 @@ footer .bottom .wrapper p:last-child {
   .reviews .bottom .slide {
     max-width: 512px !important;
     width: 100%;
-    background-image: url(/assets/images/Card.png);
+    background-image: url(assets/images/Card.png);
     padding: 40px;
   }
   .reviews .bottom .slide .slide-top {
